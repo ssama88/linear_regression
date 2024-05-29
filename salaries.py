@@ -4,7 +4,7 @@ import pandas as pd
 data = pd.read_csv('player_stats.csv')
 salaries = pd.read_csv('salaries.csv')
 # players = {}
-parsed_data = {'name': [], 'pts': [], 'ast': [], 'reb': [], 'blk': [], 'stl': [], 'sal': []}
+parsed_data = {'name': [], 'pts': [], 'ast': [], 'reb': [], 'blk': [], 'stl': [], 'sal': [], 'age': []}
 num = 0
 for idx, row in data.iterrows():
     # if row[1] in players: 
@@ -23,7 +23,7 @@ for idx, row in data.iterrows():
             parsed_data['blk'].append(row[26])
             parsed_data['stl'].append(row[25])
             parsed_data['sal'].append(float(salary_row[3][1:]))
-            
+            parsed_data['age'].append(row[3])
 
     
             # print("name: ", row[1], "salary: ", salary_row[3],
