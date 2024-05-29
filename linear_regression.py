@@ -12,7 +12,7 @@ data = pd.read_csv('Output.csv')
 players = {}
 num = 0
 duplicates = 0
-X=data.drop(columns=["name", "sal"])
+X=data.drop(columns=["name", "sal", 'fga'])
 
 print(X.head())
 
@@ -22,7 +22,7 @@ print(Y.head())
 
 
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state = 2384)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state = 3384)
 
 
 
