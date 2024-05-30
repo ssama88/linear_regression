@@ -9,7 +9,9 @@ import statsmodels.api as sm
 
 data = pd.read_csv('Output.csv')
 
-
+players = {}
+num = 0
+duplicates = 0
 X=data.drop(columns=["name", "sal", 'fga'])
 
 print(X.head())
@@ -45,7 +47,7 @@ performance['error'] = performance['Actual Value'] - performance['Predictions']
 # print(X_train)
 # print(Y_train)
 # X_train=np.arange(0,len(X_train),1)
-# plt.scatter(, Y_train, color = 'green')
+# plt.scatter(X_train, Y_train, color = 'green')
 # plt.plot(X_test, Y_pred, color = 'black')
 
 # plt.show()
